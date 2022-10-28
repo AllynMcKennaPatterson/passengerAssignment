@@ -6,7 +6,6 @@ public class Passenger {
     private String id;
     private String phone;
     private int age;
-    private int test;
 
     public Passenger(String[] title, String[] name, String[] id, String[] phone, int age){
 
