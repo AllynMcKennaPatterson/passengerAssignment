@@ -15,7 +15,7 @@ class PassengerTest {
 
     }
 
-    @Test
+    @Test   //This test will fail the title assertion
     void testTitleFail(){
         newPassenger = new Passenger("Mo", "Allyn", "a28b462g21", "0877155802", 21);
         assertTrue(newPassenger.getPassengerTitle().equals("Mr") || newPassenger.getPassengerTitle().equals("Ms") || newPassenger.getPassengerTitle().equals("Mrs"), "Passenger title was not equal to Mr or Ms") ;
@@ -25,7 +25,7 @@ class PassengerTest {
         assertTrue(newPassenger.getPassengerAge() >= 16, "Passenger age was less than 16");
     }
 
-    @Test
+    @Test   //This test will fail the name assertion
     void testNameFail(){
         newPassenger = new Passenger("Ms", "Al", "a28b462g21", "0877155802", 21);
         assertTrue(newPassenger.getPassengerTitle().equals("Mr") || newPassenger.getPassengerTitle().equals("Ms") || newPassenger.getPassengerTitle().equals("Mrs"), "Passenger title was not equal to Mr or Ms") ;
@@ -35,7 +35,7 @@ class PassengerTest {
         assertTrue(newPassenger.getPassengerAge() >= 16, "Passenger age was less than 16");
     }
 
-    @Test
+    @Test   //This test will fail the id assertion
     void testIdFail(){
         newPassenger = new Passenger("Ms", "Allyn", "a28b46", "0877155802", 21);
         assertTrue(newPassenger.getPassengerTitle().equals("Mr") || newPassenger.getPassengerTitle().equals("Ms") || newPassenger.getPassengerTitle().equals("Mrs"), "Passenger title was not equal to Mr or Ms") ;
@@ -45,7 +45,7 @@ class PassengerTest {
         assertTrue(newPassenger.getPassengerAge() >= 16, "Passenger age was less than 16");
     }
 
-    @Test
+    @Test   //This test will fail the phone assertion
     void testPhoneFail(){
         newPassenger = new Passenger("Ms", "Allyn", "a28b462g21", "087715", 21);
         assertTrue(newPassenger.getPassengerTitle().equals("Mr") || newPassenger.getPassengerTitle().equals("Ms") || newPassenger.getPassengerTitle().equals("Mrs"), "Passenger title was not equal to Mr or Ms") ;
@@ -55,7 +55,7 @@ class PassengerTest {
         assertTrue(newPassenger.getPassengerAge() >= 16, "Passenger age was less than 16");
     }
 
-    @Test
+    @Test   //This test will fail the age assertion
     void testAgeFail(){
         newPassenger = new Passenger("Ms", "Allyn", "a28b462g21", "0877155802", 11);
         assertTrue(newPassenger.getPassengerTitle().equals("Mr") || newPassenger.getPassengerTitle().equals("Ms") || newPassenger.getPassengerTitle().equals("Mrs"), "Passenger title was not equal to Mr or Ms") ;
@@ -65,7 +65,7 @@ class PassengerTest {
         assertTrue(newPassenger.getPassengerAge() >= 16, "Passenger age was less than 16");
     }
 
-    @Test
+    @Test   //This test will be successful, allowing the object to be created
     void testAllPass(){
         newPassenger = new Passenger("Mrs", "Allyn", "a28b462g21", "0877155802", 21);
         assertTrue(newPassenger.getPassengerTitle().equals("Mr") || newPassenger.getPassengerTitle().equals("Ms") || newPassenger.getPassengerTitle().equals("Mrs"), "Passenger title was not equal to Mr or Ms") ;
@@ -76,6 +76,6 @@ class PassengerTest {
     }
     @AfterEach
     void tearDown() {
-        //newPassenger = new Passenger();
+
     }
 }
