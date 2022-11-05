@@ -35,6 +35,4 @@ public class Passenger {
         passengerAge = age;
 
     }
-
-
 }
