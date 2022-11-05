@@ -12,16 +12,17 @@ class PassengerTest {
 
     @BeforeEach
     void setUp() {
+
     }
 
     @Test
     void testTitleFail(){
-        newPassenger = new Passenger("Mr", "Allyn", "1287gf8237g", "0976284", 21);
-        assertTrue(newPassenger.getTitle().equals("Mr") || newPassenger.getTitle().equals("Ms"));
-        assertTrue(newPassenger.getName().length() >= 3);
-        assertTrue(newPassenger.getId().length() >= 10);
-        assertTrue(newPassenger.getPhone().length() >= 7);
-        assertTrue(newPassenger.getAge()> 16);
+        newPassenger = new Passenger("Ms", "Allyn", "a28b462g21", "0877155802", 21);
+        assertTrue(newPassenger.getPassengerTitle().equals("Mr") || newPassenger.getPassengerTitle().equals("Ms"), "Passenger title was not equal to Mr or Ms") ;
+        assertTrue(newPassenger.getPassengerName().length() >= 3, "Passenger name was less than 3 characters");
+        assertTrue(newPassenger.getPassengerId().length() >= 10, "Passenger ID was less than 10 characters");
+        assertTrue(newPassenger.getPassengerPhone().length() >= 7, "Passenger phone no. was less than 7 characters");
+        assertTrue(newPassenger.getPassengerAge() >= 16, "Passenger age was less than 16");
     }
 
     @AfterEach
