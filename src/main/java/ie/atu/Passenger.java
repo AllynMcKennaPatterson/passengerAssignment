@@ -1,11 +1,11 @@
 package ie.atu;
 
 public class Passenger {
-    String passengerTitle;
-    String passengerName;
-    String passengerId;
-    String passengerPhone;
-    int passengerAge;
+    private String passengerTitle;
+    private String passengerName;
+    private long passengerId;
+    private long passengerPhone;
+    private int passengerAge;
 
     public String getPassengerTitle() {
         return passengerTitle;
@@ -15,11 +15,11 @@ public class Passenger {
         return passengerName;
     }
 
-    public String getPassengerId() {
+    public long getPassengerId() {
         return passengerId;
     }
 
-    public String getPassengerPhone() {
+    public long getPassengerPhone() {
         return passengerPhone;
     }
 
@@ -27,12 +27,57 @@ public class Passenger {
         return passengerAge;
     }
 
-    public Passenger(String title, String name, String id, String phone, int age){
+    public Passenger(String title, String name, long id, long phone, int age){
         passengerTitle = title;
         passengerName = name;
         passengerId = id;
         passengerPhone = phone;
         passengerAge = age;
 
+    }
+
+    public void setPassengerTitle(String passengerTitle) {
+        if("Mr".equalsIgnoreCase(passengerTitle) || "Ms".equalsIgnoreCase(passengerTitle)|| "Ms".equalsIgnoreCase(passengerTitle)) {
+            this.passengerTitle = passengerTitle;
+        }
+        else{
+            throw new IllegalArgumentException("This is not a valid title. Use Mr, Ms, or Mrs");
+        }
+    }
+
+    public void setPassengerName(String passengerName) {
+        if(passengerName.length() >= 3){
+            this.passengerName = passengerName;
+        }
+        else{
+            throw new IllegalArgumentException("This is not a valid name.");
+        }
+    }
+
+    public void setPassengerId(long passengerId) {
+        if(String.valueOf(passengerId).length() >= 10){
+            this.passengerId = passengerId;
+        }
+        else{
+            throw new IllegalArgumentException("This is not a valid ID.");
+        }
+    }
+
+    public void setPassengerPhone(long passengerPhone) {
+        if(String.valueOf(passengerPhone).length() >= 7){
+            this.passengerPhone = passengerPhone;
+        }
+        else{
+            throw new IllegalArgumentException("This is not a valid phone number.");
+        }
+    }
+
+    public void setPassengerAge(int passengerAge) {
+        if(passengerAge > 16){
+            this.passengerAge = passengerAge;
+        }
+        else{
+            throw new IllegalArgumentException("You must be over 16.");
+        }
     }
 }
